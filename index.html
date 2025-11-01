@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avaneesh Muddasani - Technical Artist Portfolio</title>
+  <script type='module' src='https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js'></script>
   <style>
     :root {
       --color-primary: #ffffff;
@@ -28,26 +29,21 @@
     section { padding: 64px 16px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
     h2 { font-size: 2rem; margin-bottom: 16px; }
     p.category-desc { color: var(--color-secondary); margin-bottom: 16px; }
-
     /* Responsive Gallery Grid */
     .gallery { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
     @media (min-width: 640px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
     @media (min-width: 1024px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
-
     .item { position: relative; border: 1px solid #222; border-radius: 8px; overflow: hidden; background: #0b0b0b; }
     .item img, .item video { width: 100%; height: 100%; display: block; object-fit: cover; }
     .item .label { position: absolute; left: 8px; bottom: 8px; background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 4px; font-size: 12px; }
-
     .subtitle { margin: 4px 0 16px; color: var(--color-secondary); font-size: 0.95rem; }
     .category { margin-top: 40px; }
-
     /* Simple cards for 3D models */
     .model-card { display:flex; align-items:center; gap:12px; padding:10px; border:1px solid #222; border-radius:8px; background:#0b0b0b; }
     .chip { font-size: 12px; padding: 2px 8px; border: 1px solid #333; border-radius: 999px; color: #ddd; }
     .model-grid { display: grid; gap: 12px; grid-template-columns: repeat(1, 1fr); }
     @media (min-width: 640px) { .model-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .model-grid { grid-template-columns: repeat(3, 1fr); } }
-
     header.site { padding: 24px 16px; max-width: 1200px; margin: 0 auto; display:flex; justify-content:space-between; align-items:center; }
   </style>
 </head>
@@ -58,68 +54,93 @@
       <a href="#gallery">My Creative Work</a>
     </nav>
   </header>
-
-  <!-- Other site content remains unchanged above -->
-
-  <!-- My Creative Work: Full Media Gallery -->
   <section id="gallery">
-    <h2>My Creative Work</h2>
-    <p class="subtitle">A curated gallery of AI artworks, advertising visuals, 3D models, and animation/VFX.</p>
-
-    <!-- AI Generated Images -->
-    <div class="category" id="ai-images">
-      <h3>AI Generated Images</h3>
-      <p class="category-desc">Lucid Origin, Flux Schnell, Phoenix, and Anime-inspired works.</p>
+    <h2>Portfolio</h2>
+    <p class="subtitle">A curated showcase of technical art, 3D work, renders, and VFX.</p>
+    <!-- AI Concept Art - Hero -->
+    <div class="category" id="hero">
+      <h3>AI Concept Art – Hero</h3>
+      <p class="category-desc">Stylized hero artworks generated with AI.</p>
       <div class="gallery">
-        <!-- Lucid_Origin -->
-        <figure class="item"><img src="Lucid_Origin_a_cinematic_photo_of_A_man_standing_alone_in_a_de_2.jpg" alt="Lucid Origin cinematic photo 2"><figcaption class="label">Lucid Origin</figcaption></figure>
-        <figure class="item"><img src="Lucid_Origin_a_cinematic_photo_of_Enhance_this_image_as_a_cine_0.jpg" alt="Lucid Origin cinematic photo 0"><figcaption class="label">Lucid Origin</figcaption></figure>
-        <figure class="item"><img src="Lucid_Origin_a_cinematic_photo_of_Enhance_this_image_as_a_cine_1.jpg" alt="Lucid Origin cinematic photo 1"><figcaption class="label">Lucid Origin</figcaption></figure>
-        <figure class="item"><img src="Lucid_Origin_a_cinematic_photo_of_Enhance_this_image_as_a_cine_2.jpg" alt="Lucid Origin cinematic photo 2B"><figcaption class="label">Lucid Origin</figcaption></figure>
-        <!-- If Lucid_Origin_a_cinematic_photo_of_Enhance_this_image_as_a_cine_3.jpg exists, include; else ignore quietly. -->
-        <figure class="item"><img src="Lucid_Origin_a_cinematic_photo_of_Enhance_this_image_as_a_cine_3.jpg" alt="Lucid Origin cinematic photo 3" onerror="this.parentElement.remove()"><figcaption class="label">Lucid Origin</figcaption></figure>
-
-        <!-- Flux_Schnell -->
-        <figure class="item"><img src="Flux_Schnell_Lone_hero_floats_in_space_dark_armor_gently_movin_0.jpg" alt="Flux Schnell lone hero 0"><figcaption class="label">Flux Schnell</figcaption></figure>
-        <figure class="item"><img src="Flux_Schnell_Lone_hero_floats_in_space_dark_armor_gently_movin_1.jpg" alt="Flux Schnell lone hero 1"><figcaption class="label">Flux Schnell</figcaption></figure>
-
+        <!-- First Hero -->
+        <figure class="item">
+          <img src="A_HERO_STANDING_ALONE_IN_A_DESOLATE_CITYSCAPE_WITH_STE_2.jpg" alt="Hero in desolate cityscape" onerror="this.parentElement.remove()">
+          <figcaption class="label">Hero</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="A_hyperrealistic_cinematic_3D_depiction_of_a_lone_hero.jpg" alt="Hyperrealistic hero" onerror="this.parentElement.remove()">
+          <figcaption class="label">Hero</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="An_extremely_realistic_cinematic_3D_close-up_portrait_o_0.jpg" alt="Hero close-up" onerror="this.parentElement.remove()">
+          <figcaption class="label">Hero</figcaption>
+        </figure>
         <!-- Phoenix -->
-        <figure class="item"><img src="Phoenix_10_A_hyperrealistic_3D_depiction_of_a_lone_hero_floati_0.jpg" alt="Phoenix hyperrealistic 3D depiction" onerror="this.parentElement.remove()"><figcaption class="label">Phoenix</figcaption></figure>
-
+        <figure class="item">
+          <img src="Phoenix_10_A_hyperrealistic_3D_depiction_of_a_lone_hero_floati_0.jpg" alt="Phoenix hyperrealistic 3D depiction" onerror="this.parentElement.remove()">
+          <figcaption class="label">Phoenix</figcaption>
+        </figure>
         <!-- Anime -->
-        <figure class="item"><img src="ANIME-~1.PNG" alt="Anime image"><figcaption class="label">Anime</figcaption></figure>
-        <figure class="item"><img src="An%20anime-inspired%20hero%20surrounded%20by%20swirling%20neon%20lights%2C%20trippy%20and%20vibrant%20motion%2C%20cinematic%20glow.png" alt="Anime-inspired neon hero"><figcaption class="label">Anime</figcaption></figure>
+        <figure class="item">
+          <img src="ANIME-~1.PNG" alt="Anime image">
+          <figcaption class="label">Anime</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="An%20anime-inspired%20hero%20surrounded%20by%20swirling%20neon%20lights%2C%20trippy%20and%20vibrant%20motion%2C%20cinematic%20glow.png" alt="Anime-inspired neon hero">
+          <figcaption class="label">Anime</figcaption>
+        </figure>
       </div>
     </div>
-
     <!-- MARS Outdoor work - Advertising Truck Images -->
     <div class="category" id="mars-outdoor">
       <h3>MARS Outdoor – Advertising Truck</h3>
       <p class="category-desc">Realistic night shots and digital truck branding frames.</p>
       <div class="gallery">
-        <figure class="item"><img src="A3DREA~1.PNG" alt="MARS advertising render"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-cinematic-commercial-photograph-of-a-b_NZgg39U3SsappA4qkKxoDg_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Truck frame 1"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-cinematic-photograph-of-a-black-1999-f_bccSa4D6RlGhvhwvmsqXQA_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Truck frame 2"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-cinematic-photograph-of-a-modern-digit_DT6v2s5uSxePgZUEDaT9oQ_Dyj0zPvWT8GLOjj9MCbnPQ.jpeg" alt="Truck frame 3"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-realistic-cinematic-night-time-shot-of_41t5UGYbTfWVd2GDZ75ogA_z1mYIaC-SU-acJA3Coyv0A (1).jpeg" alt="Truck frame 4"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-realistic-cinematic-night-time-shot-of_qoRmyE_NSNyhJCx9C3CCDA_z1mYIaC-SU-acJA3Coyv0A.jpeg" alt="Truck frame 5"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-realistic-digital-advertising-truck-br_QwA0P_IrR2i6TB8IvAqHxA_v7IK_mE1QOy23ijLvYy66A.jpeg" alt="Truck frame 6"><figcaption class="label">MARS Outdoor</figcaption></figure>
-        <figure class="item"><img src="a-realistic-digital-advertising-truck-ca_paKqBW8KRou0VYt6TxSfWA_Dyj0zPvWT8GLOjj9MCbnPQ.jpeg" alt="Truck frame 7"><figcaption class="label">MARS Outdoor</figcaption></figure>
+        <figure class="item">
+          <img src="A3DREA~1.PNG" alt="MARS advertising render">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-cinematic-commercial-photograph-of-a-b_NZgg39U3SsappA4qkKxoDg_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Truck frame 1">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-cinematic-photograph-of-a-black-1999-f_bccSa4D6RlGhvhwvmsqXQA_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Truck frame 2">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-cinematic-photograph-of-a-modern-digit_DT6v2s5uSxePgZUEDaT9oQ_Dyj0zPvWT8GLOjj9MCbnPQ.jpeg" alt="Truck frame 3">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-realistic-cinematic-night-time-shot-of_41t5UGYbTfWVd2GDZ75ogA_z1mYIaC-SU-acJA3Coyv0A (1).jpeg" alt="Truck frame 4">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-realistic-cinematic-night-time-shot-of_qoRmyE_NSNyhJCx9C3CCDA_z1mYIaC-SU-acJA3Coyv0A.jpeg" alt="Truck frame 5">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-realistic-digital-advertising-truck-br_QwA0P_IrR2i6TB8IvAqHxA_v7IK_mE1QOy23ijLvYy66A.jpeg" alt="Truck frame 6">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
+        <figure class="item">
+          <img src="a-realistic-digital-advertising-truck-ca_paKqBW8KRou0VYt6TxSfWA_Dyj0zPvWT8GLOjj9MCbnPQ.jpeg" alt="Truck frame 7">
+          <figcaption class="label">MARS Outdoor</figcaption>
+        </figure>
       </div>
     </div>
-
     <!-- 3D Models (.glb) -->
     <div class="category" id="models">
       <h3>3D Models</h3>
-      <p class="category-desc">GLB model previews. Click to download or view externally.</p>
+      <p class="category-desc">Interactive 3D models. Use your mouse to rotate and explore.</p>
       <div class="model-grid">
-        <a class="model-card" href="gamepad_ps5__hologram_style_3d_hud.glb"><span class="chip">.glb</span><span>gamepad_ps5__hologram_style_3d_hud.glb</span></a>
-        <a class="model-card" href="luffy_nika_3d_one_piece_luffy_gear_5.glb"><span class="chip">.glb</span><span>luffy_nika_3d_one_piece_luffy_gear_5.glb</span></a>
-        <a class="model-card" href="mars.glb"><span class="chip">.glb</span><span>mars.glb</span></a>
-        <a class="model-card" href="zoro.glb"><span class="chip">.glb</span><span>zoro.glb</span></a>
+        <model-viewer src='gamepad_ps5__hologram_style_3d_hud.glb' alt='PS5 Gamepad Hologram' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
+        <model-viewer src='luffy_nika_3d_one_piece_luffy_gear_5.glb' alt='Luffy Nika Gear 5' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
+        <model-viewer src='mars.glb' alt='Mars Model' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
+        <model-viewer src='zoro.glb' alt='Zoro Model' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
       </div>
     </div>
-
     <!-- Animation / VFX Video -->
     <div class="category" id="animation-vfx">
       <h3>Animation / VFX</h3>
@@ -131,13 +152,6 @@
         </figure>
       </div>
     </div>
-  </section>
-
-  <!-- Contact/Footer etc. can remain below -->
-  <section id="contact" style="padding-bottom:96px;">
-    <h2>Connect With Me</h2>
-    <p class="subtitle">Email: muddasaniavaneeshreddy@gmail.com · Phone: +1 (214) 869-8949</p>
-    <p class="subtitle">GitHub: <a href="https://github.com/Avaneesh07">github.com/Avaneesh07</a></p>
   </section>
 </body>
 </html>
