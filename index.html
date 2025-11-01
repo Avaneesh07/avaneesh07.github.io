@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avaneesh Muddasani - Technical Artist Portfolio</title>
-  <script type='module' src='https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js'></script>
   <style>
     :root {
       --color-primary: #ffffff;
@@ -13,11 +12,7 @@
       --color-secondary: rgba(255, 255, 255, 0.8);
       --accent: #6cf;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: var(--color-bg);
@@ -28,130 +23,98 @@
     a { color: var(--accent); }
     section { padding: 64px 16px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 2; }
     h2 { font-size: 2rem; margin-bottom: 16px; }
-    p.category-desc { color: var(--color-secondary); margin-bottom: 16px; }
-    /* Responsive Gallery Grid */
-    .gallery { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
-    @media (min-width: 640px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
-    @media (min-width: 1024px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
-    .item { position: relative; border: 1px solid #222; border-radius: 8px; overflow: hidden; background: #0b0b0b; }
-    .item img, .item video { width: 100%; height: 100%; display: block; object-fit: cover; }
-    .item .label { position: absolute; left: 8px; bottom: 8px; background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 4px; font-size: 12px; }
-    .subtitle { margin: 4px 0 16px; color: var(--color-secondary); font-size: 0.95rem; }
-    .category { margin-top: 40px; }
-    /* Simple cards for 3D models */
-    .model-card { display:flex; align-items:center; gap:12px; padding:10px; border:1px solid #222; border-radius:8px; background:#0b0b0b; }
-    .chip { font-size: 12px; padding: 2px 8px; border: 1px solid #333; border-radius: 999px; color: #ddd; }
-    .model-grid { display: grid; gap: 12px; grid-template-columns: repeat(1, 1fr); }
-    @media (min-width: 640px) { .model-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .model-grid { grid-template-columns: repeat(3, 1fr); } }
-    header.site { padding: 24px 16px; max-width: 1200px; margin: 0 auto; display:flex; justify-content:space-between; align-items:center; }
+    p.subtitle { color: var(--color-secondary); margin-bottom: 16px; }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .skill-card {
+      flex: 1 1 200px;
+      background: #111;
+      padding: 16px;
+      border: 1px solid #222;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .skill-card h3 { margin-bottom: 8px; color: var(--accent); }
+    .skill-card ul { padding-left: 16px; color: var(--color-secondary); }
+    /* Header Section Styles */
+    .header-content { text-align: center; padding: 100px 16px 80px; }
+    h1 { font-size: 4rem; margin-bottom: 16px; background: linear-gradient(90deg, var(--color-primary), var(--accent)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    p.subtitle { font-size: 1.2rem; }
+    #particles-js { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
   </style>
 </head>
 <body>
-  <header class="site">
-    <h1>AVANEESH MUDDASANI</h1>
-    <nav>
-      <a href="#gallery">My Creative Work</a>
-    </nav>
+  <div id="particles-js"></div>
+  <header class="header-content">
+    <h1>Avaneesh Muddasani</h1>
+    <p class="subtitle">Technical Artist | Blender | Unreal Engine | Shader Development</p>
   </header>
-  <section id="gallery">
-    <h2>Portfolio</h2>
-    <p class="subtitle">A curated showcase of technical art, 3D work, renders, and VFX.</p>
-    <!-- AI Concept Art - Hero -->
-    <div class="category" id="hero">
-      <h3>AI Concept Art – Hero</h3>
-      <p class="category-desc">Stylized hero artworks generated with AI.</p>
-      <div class="gallery">
-        <!-- First Hero -->
-        <figure class="item">
-          <img src="A_HERO_STANDING_ALONE_IN_A_DESOLATE_CITYSCAPE_WITH_STE_2.jpg" alt="Hero in desolate cityscape" onerror="this.parentElement.remove()">
-          <figcaption class="label">Hero</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="A_hyperrealistic_cinematic_3D_depiction_of_a_lone_hero.jpg" alt="Hyperrealistic hero" onerror="this.parentElement.remove()">
-          <figcaption class="label">Hero</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="An_extremely_realistic_cinematic_3D_close-up_portrait_o_0.jpg" alt="Hero close-up" onerror="this.parentElement.remove()">
-          <figcaption class="label">Hero</figcaption>
-        </figure>
-        <!-- Phoenix -->
-        <figure class="item">
-          <img src="Phoenix_10_A_hyperrealistic_3D_depiction_of_a_lone_hero_floati_0.jpg" alt="Phoenix hyperrealistic 3D depiction" onerror="this.parentElement.remove()">
-          <figcaption class="label">Phoenix</figcaption>
-        </figure>
-        <!-- Anime -->
-        <figure class="item">
-          <img src="ANIME-~1.PNG" alt="Anime image">
-          <figcaption class="label">Anime</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="An%20anime-inspired%20hero%20surrounded%20by%20swirling%20neon%20lights%2C%20trippy%20and%20vibrant%20motion%2C%20cinematic%20glow.png" alt="Anime-inspired neon hero">
-          <figcaption class="label">Anime</figcaption>
-        </figure>
+  <section id="skills">
+    <h2>Skills &amp; Expertise</h2>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>3D Modeling</h3>
+        <ul>
+          <li>Blender (Advanced)</li>
+          <li>Hard-surface modeling</li>
+          <li>UV unwrapping</li>
+          <li>Procedural textures</li>
+        </ul>
       </div>
-    </div>
-    <!-- MARS Outdoor work - Advertising Truck Images -->
-    <div class="category" id="mars-outdoor">
-      <h3>MARS Outdoor – Advertising Truck</h3>
-      <p class="category-desc">Realistic night shots and digital truck branding frames.</p>
-      <div class="gallery">
-        <figure class="item">
-          <img src="A3DREA~1.PNG" alt="MARS advertising render">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-cinematic-commercial-photograph-of-a-b_NZgg39U3SsappA4qkKxoDg_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Truck frame 1">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-cinematic-photograph-of-a-black-1999-f_bccSa4D6RlGhvhwvmsqXQA_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Truck frame 2">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-cinematic-photograph-of-a-modern-digit_DT6v2s5uSxePgZUEDaT9oQ_Dyj0zPvWT8GLOjj9MCbnPQ.jpeg" alt="Truck frame 3">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-realistic-cinematic-night-time-shot-of_41t5UGYbTfWVd2GDZ75ogA_z1mYIaC-SU-acJA3Coyv0A (1).jpeg" alt="Truck frame 4">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-realistic-cinematic-night-time-shot-of_qoRmyE_NSNyhJCx9C3CCDA_z1mYIaC-SU-acJA3Coyv0A.jpeg" alt="Truck frame 5">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-realistic-digital-advertising-truck-br_QwA0P_IrR2i6TB8IvAqHxA_v7IK_mE1QOy23ijLvYy66A.jpeg" alt="Truck frame 6">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
-        <figure class="item">
-          <img src="a-realistic-digital-advertising-truck-ca_paKqBW8KRou0VYt6TxSfWA_Dyj0zPvWT8GLOjj9MCbnPQ.jpeg" alt="Truck frame 7">
-          <figcaption class="label">MARS Outdoor</figcaption>
-        </figure>
+      <div class="skill-card">
+        <h3>Game Engines</h3>
+        <ul>
+          <li>Unreal Engine</li>
+          <li>Real-time rendering</li>
+          <li>Material creation</li>
+          <li>Lighting &amp; optimization</li>
+        </ul>
       </div>
-    </div>
-    <!-- 3D Models (.glb) -->
-    <div class="category" id="models">
-      <h3>3D Models</h3>
-      <p class="category-desc">Interactive 3D models. Use your mouse to rotate and explore.</p>
-      <div class="model-grid">
-        <model-viewer src='gamepad_ps5__hologram_style_3d_hud.glb' alt='PS5 Gamepad Hologram' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
-        <model-viewer src='luffy_nika_3d_one_piece_luffy_gear_5.glb' alt='Luffy Nika Gear 5' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
-        <model-viewer src='mars.glb' alt='Mars Model' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
-        <model-viewer src='zoro.glb' alt='Zoro Model' auto-rotate camera-controls style='width:100%; height:400px; background-color:#000;'></model-viewer>
-      </div>
-    </div>
-    <!-- Animation / VFX Video -->
-    <div class="category" id="animation-vfx">
-      <h3>Animation / VFX</h3>
-      <p class="category-desc">Short loop showcasing motion and effects.</p>
-      <div class="gallery" style="grid-template-columns: 1fr;">
-        <figure class="item">
-          <video controls preload="metadata" src="ALOOPI~1.MP4" poster="Lucid_Origin_a_cinematic_photo_of_A_man_standing_alone_in_a_de_2.jpg"></video>
-          <figcaption class="label">Animation Loop</figcaption>
-        </figure>
+      <div class="skill-card">
+        <h3>Shader Dev</h3>
+        <ul>
+          <li>Shader Graph</li>
+          <li>Custom shaders</li>
+          <li>PBR workflows</li>
+          <li>Procedural techniques</li>
+        </ul>
       </div>
     </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#6cf" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: false },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: "#6cf", opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 1.5, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 1 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>
