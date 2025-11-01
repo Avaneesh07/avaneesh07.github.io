@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Avaneesh Muddasani — Technical Artist & UI/UX</title>
   <style>
     :root{
@@ -19,21 +19,19 @@
     .btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0a0a0a;font-weight:700;padding:10px 14px;border-radius:10px}
     .grid{display:grid;gap:16px}
     .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .three{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .four{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
     section{margin-top:28px}
     .card{background:var(--card);border:1px solid #1c2231;border-radius:14px;padding:16px}
     h2{margin:0 0 12px 0;font-size:22px}
     h3{margin:10px 0 6px 0;font-size:16px}
     ul{margin:8px 0 0 18px}
     .tag{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid #2a3246;color:#cbd5e1;margin:6px 6px 0 0;font-size:12px}
-
-    /* Media Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
-    .media{position:relative;overflow:hidden;border-radius:10px;background:#0f121a;border:1px solid #1f273a}
-    .media img, .media video{display:block;width:100%;height:180px;object-fit:cover;transition:transform .3s ease}
-    .media:hover img, .media:hover video{transform:scale(1.04)}
-    .media figcaption{position:absolute;inset:auto 6px 6px 6px;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);padding:4px 6px;border-radius:6px;font-size:12px;color:#dbeafe}
-
+    .category{margin-top:20px}
+    .category h3{margin-bottom:10px}
+    .category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+    .media-item{position:relative;overflow:hidden;border-radius:8px;background:#0f121a;border:1px solid #1f273a}
+    .media-item img{display:block;width:100%;height:150px;object-fit:cover;transition:transform .3s ease}
+    .media-item:hover img{transform:scale(1.04)}
     footer{margin:36px 0;color:var(--muted);font-size:14px}
   </style>
 </head>
@@ -50,17 +48,16 @@
     <section class="grid two">
       <div class="card">
         <h2>Professional Experience</h2>
-        <h3>Photographer & Photo Technician & Sales Associate — Viktorianna Photography</h3>
-        <div class="muted">May 2024 - Present • Dallas-Fort Worth</div>
+        <h3>Photographer & Photo Technician & Sales Associate</h3>
+        <div class="muted">Viktorianna Photography | May 2024 - Present | Dallas-Fort Worth</div>
         <ul>
           <li>Captured and edited high-quality portraits using Photoshop & Lightroom</li>
           <li>Managed lighting, cameras, printers for same-day print delivery</li>
           <li>Increased photo package conversions through sales & upselling</li>
           <li>Calibrated hardware and troubleshot equipment efficiently</li>
         </ul>
-
-        <h3>UI/UX Technical Artist — Skillo</h3>
-        <div class="muted">Jan 2024 - Present • Hybrid</div>
+        <h3>UI/UX Technical Artist</h3>
+        <div class="muted">Skillo | Jan 2024 - Present | Hybrid</div>
         <ul>
           <li>Designed artist-friendly UI/UX systems for real-time production</li>
           <li>Built custom Python tool panels using PySide & NumPy</li>
@@ -68,25 +65,22 @@
           <li>Integrated & optimized assets in Unity & Unreal Engine</li>
           <li>Created procedural Houdini systems for VFX assets</li>
         </ul>
-
-        <h3>Photographer & Photo Technician — Visenta Studio LLC</h3>
-        <div class="muted">May 2023 - Nov 2023 • Dallas-Fort Worth</div>
+        <h3>Photographer & Photo Technician</h3>
+        <div class="muted">Visenta Studio LLC | May 2023 - Nov 2023 | Dallas-Fort Worth</div>
         <ul>
           <li>Captured studio & event photography with professional lighting</li>
           <li>Exceeded daily sales goals through customer engagement</li>
           <li>Optimized darkroom & digital workflows for efficiency</li>
         </ul>
-
-        <h3>Teaching Assistant — University of Texas at Arlington</h3>
-        <div class="muted">Aug - Dec 2022 • Arlington, TX</div>
+        <h3>Teaching Assistant</h3>
+        <div class="muted">University of Texas at Arlington | Aug - Dec 2022 | Arlington, TX</div>
         <ul>
           <li>Supported lectures, labs, and hands-on exercises</li>
           <li>Tutored students and graded assignments</li>
           <li>Developed supplementary learning materials</li>
         </ul>
-
-        <h3>Technical Artist — Amazon Games: New World</h3>
-        <div class="muted">Jun 2020 - Nov 2021 • Hyderabad, India</div>
+        <h3>Technical Artist - Amazon Games: New World</h3>
+        <div class="muted">Amazon | Jun 2020 - Nov 2021 | Hyderabad, India</div>
         <ul>
           <li>Built custom Python Maya tools, automated tasks by 30%</li>
           <li>Created optimized 3D assets in Unity, Maya, Blender</li>
@@ -99,58 +93,79 @@
       <div class="card">
         <h2>Featured Projects</h2>
         <h3>Physics Sim: Bouncing Ball (Pygame + NumPy)</h3>
-        <p>Interactive real-time physics sandbox merging VFX principles and animation programming.</p>
+        <p>Interactive real-time physics sandbox merging VFX principles and animation programming. Implemented gravity, collisions, soft-body simulation, spark particles, velocity heatmaps, and real-time debug HUD. Built from scratch to showcase technical art and simulation design.</p>
         <h3>Amazon Games - New World Technical Art</h3>
-        <p>Custom Python-based Maya tools automated repetitive tasks, improving efficiency by 30%.</p>
+        <p>Designed and maintained art tools supporting production workflows. Developed custom Python-based Maya tools that automated repetitive tasks, improving efficiency by 30%. Created optimized 3D assets using Unity, Maya, Blender, and Houdini procedural systems.</p>
         <h3>Gesture Recognition Dynamics</h3>
-        <p>Hybrid LSTM-CNN model with MediaPipe for pose extraction and faster classification.</p>
+        <p>Built a hybrid LSTM-CNN model for video activity detection. Integrated MediaPipe for pose extraction and applied preprocessing to reduce noise. Improved classification speed by 25% and enhanced model accuracy through thorough benchmarking.</p>
         <h3>Smart Student Portal</h3>
-        <p>ReactJS + Spring Boot SPA with REST APIs and role-based support.</p>
-        <h3>MARS Outdoor — 3D Advertising Venture</h3>
-        <p>3D animations for LED trucks and hologram ads; brand identity with AI tools.</p>
-        <h3>Lucid Origin — AI Film Project</h3>
-        <p>Experimental AI-driven cinematic VFX and technical art exploration.</p>
+        <p>Built single-page academic portal using ReactJS and Spring Boot. Implemented REST APIs, MySQL/H2 database, responsive styling, and role-based user support. Optimized React rendering for 30% faster load times and 40% higher engagement.</p>
+        <h3>MARS Outdoor - 3D Advertising Venture</h3>
+        <p>Creative business & 3D advertising venture featuring mobile LED truck ads, 3D hologram signage, and futuristic outdoor advertising. Created 3D animations for LED trucks, hologram ads, and brand identity materials using AI tools.</p>
+        <h3>Lucid Origin - AI Film Project</h3>
+        <p>Experimental AI film and animation project focused on AI-driven storytelling. Created cinematic VFX portfolio piece blending AI with technical art. Developed experimental 3D assembly visuals, camera motion, and lighting experiments.</p>
       </div>
     </section>
 
     <section class="grid two">
       <div class="card">
         <h2>Education</h2>
-        <h3>MS, Computer Science — University of Texas at Arlington</h3>
-        <div class="muted">Jan 2022 - Dec 2023 • GPA: 3.7</div>
-        <h4>Relevant Coursework</h4>
+        <h3>MS, Computer Science</h3>
+        <div class="muted">University of Texas at Arlington | Jan 2022 - Dec 2023 | GPA: 3.7</div>
+        <p><strong>Relevant Coursework:</strong></p>
         <ul>
           <li>Machine Learning</li>
           <li>Computer Vision</li>
           <li>Data Mining</li>
           <li>Advanced Algorithms</li>
         </ul>
-        <div class="tag">ACM</div><div class="tag">HackUTA</div><div class="tag">AI/ML Study Groups</div><div class="tag">Council</div><div class="tag">Open-source</div>
-
-        <h3 style="margin-top:14px">BTech, Computer Science — GITAM Deemed University</h3>
-        <div class="muted">Aug 2016 - Sep 2020 • GPA: 3.2</div>
-        <h4>Relevant Coursework</h4>
+        <p><strong>Activities:</strong></p>
+        <div class="tag">ACM</div><div class="tag">HackUTA</div><div class="tag">AI/ML Study Groups</div><div class="tag">Council</div><div class="tag">open-source contributor</div>
+        
+        <h3 style="margin-top:14px">BTech, Computer Science</h3>
+        <div class="muted">GITAM Deemed University | Aug 2016 - Sep 2020 | GPA: 3.2</div>
+        <p><strong>Relevant Coursework:</strong></p>
         <ul>
           <li>Data Structures</li>
           <li>Algorithms</li>
           <li>Object-Oriented Programming</li>
           <li>Database Management</li>
         </ul>
+        <p><strong>Activities:</strong></p>
         <div class="tag">Coding Club</div><div class="tag">Hackathons</div><div class="tag">Tech Fest</div><div class="tag">Google DSC</div>
       </div>
 
-      <div id="work" class="card">
-        <h2>My Creative Work — Media Gallery</h2>
-        <p class="muted">All uploaded images displayed in a responsive grid.</p>
-        <div class="gallery">
-          <!-- Add all uploaded images here; using filenames from repository if present -->
-          <figure class="media"><img src="a-cinematic-photograph-of-a-black-1999-f_bccSa4D6RlGhvhwvmsqXQA_dO_f36rZTBusl4KE2uWJtw.jpeg" alt="Creative Work 1"><figcaption>3D/Photo</figcaption></figure>
-          <!-- If there are more images in repo, duplicate the pattern below with correct filenames -->
-          <!-- Example placeholders (safe fallbacks if more assets exist) -->
-          <figure class="media"><img src="hero.jpg" alt="Creative Work 2"><figcaption>Render</figcaption></figure>
-          <figure class="media"><img src="gallery-1.jpg" alt="Creative Work 3"><figcaption>VFX</figcaption></figure>
-          <figure class="media"><img src="gallery-2.jpg" alt="Creative Work 4"><figcaption>Tech Art</figcaption></figure>
-          <figure class="media"><img src="gallery-3.jpg" alt="Creative Work 5"><figcaption>Design</figcaption></figure>
+      <div class="card" id="work">
+        <h2>My Creative Work</h2>
+        
+        <div class="category">
+          <h3>3D Models & Assets</h3>
+          <div class="category-grid">
+            <div class="media-item"><img src="A3DREA~1.PNG" alt="3D Model"></div>
+          </div>
+        </div>
+        
+        <div class="category">
+          <h3>AI Generated Images</h3>
+          <div class="category-grid">
+            <div class="media-item"><img src="An anime-inspired hero surrounded by swirling neon lights, trippy and vibrant motion, cinematic glow.png" alt="AI Art"></div>
+            <div class="media-item"><img src="Flux_Schnell_A vibrant neon-lit portrait of a futuristic warrior, glowing accents, bold colors, sharp details.png" alt="AI Art"></div>
+            <div class="media-item"><img src="Flux_Schnell_A young martial artist mid-kick, blurred motion, vibrant gradients, action-packed energy.png" alt="AI Art"></div>
+          </div>
+        </div>
+        
+        <div class="category">
+          <h3>Animation & VFX</h3>
+          <div class="category-grid">
+            <div class="media-item"><img src="ANIME-~1.PNG" alt="Animation"></div>
+            <div class="media-item"><img src="Lucid_Origin_Epic cinematic still of a futuristic character, dramatic lighting, sci-fi atmosphere, ultra-detailed.png" alt="VFX"></div>
+          </div>
+        </div>
+        
+        <div class="category">
+          <h3>Technical Pipelines</h3>
+          <div class="category-grid">
+          </div>
         </div>
       </div>
     </section>
@@ -158,10 +173,10 @@
     <section class="grid two">
       <div class="card">
         <h2>Connect With Me</h2>
-        <p><a href="https://www.linkedin.com/in/avaneeshmuddasani">Professional Profile</a></p>
+        <p><a href="https://www.linkedin.com/in/avaneeshmuddasani">LinkedIn</a> — Professional Profile</p>
         <p><a href="https://github.com/Avaneesh07">GitHub</a> — Code & Projects</p>
         <p><a href="mailto:muddasaniavaneeshreddy@gmail.com">muddasaniavaneeshreddy@gmail.com</a></p>
-        <p>Phone: +1 (214) 869-8949</p>
+        <p><strong>Phone:</strong> +1 (214) 869-8949</p>
       </div>
     </section>
 
