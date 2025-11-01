@@ -1,191 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Avaneesh Muddasani — Technical Artist & UI/UX</title>
-  <style>
-    :root{
-      --bg:#0b0c10; --card:#111319; --text:#e6e6e6; --muted:#aab0b6; --accent:#6ee7ff; --accent2:#a78bfa;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:auto;padding:24px}
-    header.hero{display:grid;gap:16px;padding:28px;border-radius:16px;background:linear-gradient(180deg,#121625, #0d1018);border:1px solid #1b2130}
-    .title{font-size:28px;font-weight:800;letter-spacing:.3px}
-    .subtitle{color:var(--muted);max-width:70ch}
-    .btn{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0a0a0a;font-weight:700;padding:10px 14px;border-radius:10px}
-    .grid{display:grid;gap:16px}
-    .two{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .four{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-    section{margin-top:28px}
-    .card{background:var(--card);border:1px solid #1c2231;border-radius:14px;padding:16px}
-    h2{margin:0 0 12px 0;font-size:22px}
-    h3{margin:10px 0 6px 0;font-size:16px}
-    ul{margin:8px 0 0 18px}
-    .tag{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid #2a3246;color:#cbd5e1;margin:6px 6px 0 0;font-size:12px}
-    .category{margin-top:20px}
-    .category h3{margin-bottom:10px}
-    .category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:16px}
-    .media-item{position:relative;overflow:hidden;border-radius:8px;background:#0f121a;border:1px solid #1f273a}
-    .media-item img{display:block;width:100%;height:150px;object-fit:cover;transition:transform .3s ease}
-    .media-item:hover img{transform:scale(1.04)}
-    footer{margin:36px 0;color:var(--muted);font-size:14px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaneesh's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+        
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            color: #666;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .social-links {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="hero">
-      <div class="title">AVANEESH MUDDASANI</div>
-      <div class="subtitle">Technical Artist & UI/UX Designer specializing in 3D pipelines, real-time tools, Python automation, and VFX. Building art systems that bridge creativity and technology for games and interactive experiences.</div>
-      <div>
-        <a class="btn" href="#work">View My Work</a>
-      </div>
-    </header>
-
-    <section class="grid two">
-      <div class="card">
-        <h2>Professional Experience</h2>
-        <h3>Photographer & Photo Technician & Sales Associate</h3>
-        <div class="muted">Viktorianna Photography | May 2024 - Present | Dallas-Fort Worth</div>
-        <ul>
-          <li>Captured and edited high-quality portraits using Photoshop & Lightroom</li>
-          <li>Managed lighting, cameras, printers for same-day print delivery</li>
-          <li>Increased photo package conversions through sales & upselling</li>
-          <li>Calibrated hardware and troubleshot equipment efficiently</li>
-        </ul>
-        <h3>UI/UX Technical Artist</h3>
-        <div class="muted">Skillo | Jan 2024 - Present | Hybrid</div>
-        <ul>
-          <li>Designed artist-friendly UI/UX systems for real-time production</li>
-          <li>Built custom Python tool panels using PySide & NumPy</li>
-          <li>Developed physics sandbox in Pygame + NumPy</li>
-          <li>Integrated & optimized assets in Unity & Unreal Engine</li>
-          <li>Created procedural Houdini systems for VFX assets</li>
-        </ul>
-        <h3>Photographer & Photo Technician</h3>
-        <div class="muted">Visenta Studio LLC | May 2023 - Nov 2023 | Dallas-Fort Worth</div>
-        <ul>
-          <li>Captured studio & event photography with professional lighting</li>
-          <li>Exceeded daily sales goals through customer engagement</li>
-          <li>Optimized darkroom & digital workflows for efficiency</li>
-        </ul>
-        <h3>Teaching Assistant</h3>
-        <div class="muted">University of Texas at Arlington | Aug - Dec 2022 | Arlington, TX</div>
-        <ul>
-          <li>Supported lectures, labs, and hands-on exercises</li>
-          <li>Tutored students and graded assignments</li>
-          <li>Developed supplementary learning materials</li>
-        </ul>
-        <h3>Technical Artist - Amazon Games: New World</h3>
-        <div class="muted">Amazon | Jun 2020 - Nov 2021 | Hyderabad, India</div>
-        <ul>
-          <li>Built custom Python Maya tools, automated tasks by 30%</li>
-          <li>Created optimized 3D assets in Unity, Maya, Blender</li>
-          <li>Developed procedural Houdini environments</li>
-          <li>Integrated Substance workflows for PBR materials</li>
-          <li>Improved runtime performance & authored tech docs</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Featured Projects</h2>
-        <h3>Physics Sim: Bouncing Ball (Pygame + NumPy)</h3>
-        <p>Interactive real-time physics sandbox merging VFX principles and animation programming. Implemented gravity, collisions, soft-body simulation, spark particles, velocity heatmaps, and real-time debug HUD. Built from scratch to showcase technical art and simulation design.</p>
-        <h3>Amazon Games - New World Technical Art</h3>
-        <p>Designed and maintained art tools supporting production workflows. Developed custom Python-based Maya tools that automated repetitive tasks, improving efficiency by 30%. Created optimized 3D assets using Unity, Maya, Blender, and Houdini procedural systems.</p>
-        <h3>Gesture Recognition Dynamics</h3>
-        <p>Built a hybrid LSTM-CNN model for video activity detection. Integrated MediaPipe for pose extraction and applied preprocessing to reduce noise. Improved classification speed by 25% and enhanced model accuracy through thorough benchmarking.</p>
-        <h3>Smart Student Portal</h3>
-        <p>Built single-page academic portal using ReactJS and Spring Boot. Implemented REST APIs, MySQL/H2 database, responsive styling, and role-based user support. Optimized React rendering for 30% faster load times and 40% higher engagement.</p>
-        <h3>MARS Outdoor - 3D Advertising Venture</h3>
-        <p>Creative business & 3D advertising venture featuring mobile LED truck ads, 3D hologram signage, and futuristic outdoor advertising. Created 3D animations for LED trucks, hologram ads, and brand identity materials using AI tools.</p>
-        <h3>Lucid Origin - AI Film Project</h3>
-        <p>Experimental AI film and animation project focused on AI-driven storytelling. Created cinematic VFX portfolio piece blending AI with technical art. Developed experimental 3D assembly visuals, camera motion, and lighting experiments.</p>
-      </div>
-    </section>
-
-    <section class="grid two">
-      <div class="card">
-        <h2>Education</h2>
-        <h3>MS, Computer Science</h3>
-        <div class="muted">University of Texas at Arlington | Jan 2022 - Dec 2023 | GPA: 3.7</div>
-        <p><strong>Relevant Coursework:</strong></p>
-        <ul>
-          <li>Machine Learning</li>
-          <li>Computer Vision</li>
-          <li>Data Mining</li>
-          <li>Advanced Algorithms</li>
-        </ul>
-        <p><strong>Activities:</strong></p>
-        <div class="tag">ACM</div><div class="tag">HackUTA</div><div class="tag">AI/ML Study Groups</div><div class="tag">Council</div><div class="tag">open-source contributor</div>
+    <div class="container">
+        <header>
+            <h1>Avaneesh Kumar</h1>
+            <p class="subtitle">Software Developer | Problem Solver | Tech Enthusiast</p>
+            <div class="social-links">
+                <a href="https://github.com/Avaneesh07" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="mailto:avaneesh@example.com">Email</a>
+            </div>
+        </header>
         
-        <h3 style="margin-top:14px">BTech, Computer Science</h3>
-        <div class="muted">GITAM Deemed University | Aug 2016 - Sep 2020 | GPA: 3.2</div>
-        <p><strong>Relevant Coursework:</strong></p>
-        <ul>
-          <li>Data Structures</li>
-          <li>Algorithms</li>
-          <li>Object-Oriented Programming</li>
-          <li>Database Management</li>
-        </ul>
-        <p><strong>Activities:</strong></p>
-        <div class="tag">Coding Club</div><div class="tag">Hackathons</div><div class="tag">Tech Fest</div><div class="tag">Google DSC</div>
-      </div>
-
-      <div class="card" id="work">
-        <h2>My Creative Work</h2>
+        <section>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm Avaneesh, a passionate software developer with a love for creating elegant solutions to complex problems. I specialize in web development and enjoy working with modern technologies to build user-friendly applications.</p>
+                <p style="margin-top: 15px;">When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or learning about the latest trends in software development.</p>
+            </div>
+        </section>
         
-        <div class="category">
-          <h3>3D Models & Assets</h3>
-          <div class="category-grid">
-            <div class="media-item"><img src="A3DREA~1.PNG" alt="3D Model"></div>
-          </div>
-        </div>
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Git/GitHub</div>
+            </div>
+        </section>
         
-        <div class="category">
-          <h3>AI Generated Images</h3>
-          <div class="category-grid">
-            <div class="media-item"><img src="An anime-inspired hero surrounded by swirling neon lights, trippy and vibrant motion, cinematic glow.png" alt="AI Art"></div>
-            <div class="media-item"><img src="Flux_Schnell_A vibrant neon-lit portrait of a futuristic warrior, glowing accents, bold colors, sharp details.png" alt="AI Art"></div>
-            <div class="media-item"><img src="Flux_Schnell_A young martial artist mid-kick, blurred motion, vibrant gradients, action-packed energy.png" alt="AI Art"></div>
-          </div>
-        </div>
+        <section>
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features a clean design and smooth animations.</p>
+            </div>
+            <div class="project-card">
+                <h3>Web Application</h3>
+                <p>Full-stack web application with user authentication and real-time data updates. Built using React and Node.js.</p>
+            </div>
+            <div class="project-card">
+                <h3>Open Source Contributions</h3>
+                <p>Active contributor to various open-source projects on GitHub, focusing on improving documentation and fixing bugs.</p>
+            </div>
+        </section>
         
-        <div class="category">
-          <h3>Animation & VFX</h3>
-          <div class="category-grid">
-            <div class="media-item"><img src="ANIME-~1.PNG" alt="Animation"></div>
-            <div class="media-item"><img src="Lucid_Origin_Epic cinematic still of a futuristic character, dramatic lighting, sci-fi atmosphere, ultra-detailed.png" alt="VFX"></div>
-          </div>
-        </div>
-        
-        <div class="category">
-          <h3>Technical Pipelines</h3>
-          <div class="category-grid">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid two">
-      <div class="card">
-        <h2>Connect With Me</h2>
-        <p><a href="https://www.linkedin.com/in/avaneeshmuddasani">LinkedIn</a> — Professional Profile</p>
-        <p><a href="https://github.com/Avaneesh07">GitHub</a> — Code & Projects</p>
-        <p><a href="mailto:muddasaniavaneeshreddy@gmail.com">muddasaniavaneeshreddy@gmail.com</a></p>
-        <p><strong>Phone:</strong> +1 (214) 869-8949</p>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Avaneesh Muddasani • Built with HTML/CSS
-    </footer>
-  </div>
-  <script>
-    document.getElementById('y').textContent=new Date().getFullYear();
-  </script>
+        <footer>
+            <p>&copy; 2024 Avaneesh Kumar. All rights reserved.</p>
+            <p style="margin-top: 10px;">Built with passion and code ❤️</p>
+        </footer>
+    </div>
 </body>
 </html>
